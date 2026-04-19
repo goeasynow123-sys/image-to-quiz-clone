@@ -254,3 +254,5 @@
   0%, 100% { box-shadow: 0 4px 16px hsl(var(--quiz-cta-from) / 0.3); }
   50%       { box-shadow: 0 4px 28px hsl(var(--quiz-cta-from) / 0.5); }
 }
+
+/* Trigger Vercel Deploy - Branding Update */
