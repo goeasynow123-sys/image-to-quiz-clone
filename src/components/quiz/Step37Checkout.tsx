@@ -69,7 +69,7 @@ const Step37Checkout = ({ dogName, breed, age, challenges, obedienceLevel }: Ste
     <div className="flex flex-col min-h-screen bg-background pb-32 overflow-y-auto touch-pan-y quiz-step-enter">
 
       {/* Timer */}
-      <div className="sticky top-0 z-20 bg-red-600 text-white text-center py-3 px-4">
+      <div className="sticky top-0 z-20 bg-[#2467a3] text-white text-center py-3 px-4">
         <p className="font-black uppercase tracking-widest" style={{ fontSize: "10px" }}>⚡ Oferta por Tempo Limitado!</p>
         <p className="font-medium" style={{ fontSize: "var(--text-small)" }}>
           Seu desconto expira em:{" "}
@@ -93,8 +93,8 @@ const Step37Checkout = ({ dogName, breed, age, challenges, obedienceLevel }: Ste
         <div className="quiz-card mb-6">
           <div className="flex items-start justify-center gap-3 mb-6">
             <div className="flex flex-col items-center flex-1">
-              <span className="bg-red-50 text-red-500 font-black px-3 py-1 rounded-full mb-2 uppercase" style={{ fontSize: "10px" }}>Agora</span>
-              <div className="rounded-2xl overflow-hidden border-2 border-red-100">
+              <span className="bg-blue-50 text-[#2467a3] font-black px-3 py-1 rounded-full mb-2 uppercase" style={{ fontSize: "10px" }}>Agora</span>
+              <div className="rounded-2xl overflow-hidden border-2 border-blue-100">
                 <img src={womanBefore} alt="Antes" className="w-full object-contain" style={{ filter: "sepia(0.4) saturate(1.3)" }} loading="lazy" />
               </div>
             </div>
@@ -120,7 +120,7 @@ const Step37Checkout = ({ dogName, breed, age, challenges, obedienceLevel }: Ste
                   className="h-full rounded-full transition-all duration-1000"
                   style={{
                     width: `${(level / 5) * 100}%`,
-                    background: level === 5 ? "#10b981" : "linear-gradient(to right, #ef4444, #fbbf24, #10b981)",
+                    background: level === 5 ? "#10b981" : "linear-gradient(to right, #2467a3, #60a5fa, #10b981)",
                   }}
                 />
               </div>
@@ -157,8 +157,8 @@ const Step37Checkout = ({ dogName, breed, age, challenges, obedienceLevel }: Ste
         </div>
 
         {/* Culpa não é sua */}
-        <div className="bg-red-50 border border-red-100 rounded-2xl p-4 mb-6">
-          <h2 className="font-black text-red-600 mb-2 text-center" style={{ fontSize: "var(--text-title)" }}>
+        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4 mb-6">
+          <h2 className="font-black text-[#2467a3] mb-2 text-center" style={{ fontSize: "var(--text-title)" }}>
             A culpa não é sua (e nem do {dogName})
           </h2>
           <p className="text-gray-700 leading-relaxed text-center" style={{ fontSize: "var(--text-small)" }}>

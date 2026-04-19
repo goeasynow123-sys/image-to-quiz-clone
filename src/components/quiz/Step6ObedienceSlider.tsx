@@ -30,7 +30,7 @@ const Step6ObedienceSlider: React.FC<Step6ObedienceSliderProps> = ({ onSelect })
               className="h-full transition-all duration-700 ease-out"
               style={{
                 width: value ? `${(value / 5) * 100}%` : "0%",
-                background: "linear-gradient(to right, #ef4444, #fbbf24, #10b981)",
+                background: "linear-gradient(to right, #2467a3, #60a5fa, #10b981)",
                 opacity: value ? 1 : 0.2
               }}
             />

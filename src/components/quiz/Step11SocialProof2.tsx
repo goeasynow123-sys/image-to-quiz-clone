@@ -30,7 +30,7 @@ const Step11SocialProof2 = ({ onNext }: Step11Props) => {
           </div>
         </div>
 
-        <div className="w-full rounded-2xl p-4 bg-amber-50 border border-amber-200">
+        <div className="w-full rounded-2xl p-4 bg-blue-50 border border-blue-100">
           <p className="text-xs sm:text-sm text-foreground leading-relaxed">
             Responda às perguntas e receba o seu <strong>Desafio de Obediência Canina</strong> sob medida.
           </p>

@@ -94,12 +94,12 @@ const Step7Revelation: React.FC<Step7RevelationProps> = ({ dogName, breed, chall
             />
 
             <g className={`transition-all duration-500 ${animate ? "opacity-100" : "opacity-0"}`}>
-              <circle cx="30" cy="220" r="6" fill="#ef4444" />
-              <text x="30" y="200" textAnchor="middle" className="text-[14px] font-black fill-red-500 uppercase">Dia 1-7</text>
+              <circle cx="30" cy="220" r="6" fill="#2467a3" />
+              <text x="30" y="200" textAnchor="middle" className="text-[14px] font-black fill-[#2467a3] uppercase">Dia 1-7</text>
             </g>
             <g className={`transition-all duration-500 delay-1000 ${animate ? "opacity-100" : "opacity-0"}`}>
-              <circle cx="230" cy="100" r="6" fill="#fbbf24" />
-              <text x="230" y="80" textAnchor="middle" className="text-[14px] font-black fill-amber-500 uppercase">Dia 8-14</text>
+              <circle cx="230" cy="100" r="6" fill="#60a5fa" />
+              <text x="230" y="80" textAnchor="middle" className="text-[14px] font-black fill-blue-400 uppercase">Dia 8-14</text>
             </g>
             <g className={`transition-all duration-500 delay-2000 ${animate ? "opacity-100" : "opacity-0"}`}>
               <circle cx="380" cy="10" r="8" fill="#10b981" />
@@ -108,8 +108,8 @@ const Step7Revelation: React.FC<Step7RevelationProps> = ({ dogName, breed, chall
 
             <defs>
               <linearGradient id="triColorGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#ef4444" />
-                <stop offset="50%" stopColor="#fbbf24" />
+                <stop offset="0%" stopColor="#2467a3" />
+                <stop offset="50%" stopColor="#60a5fa" />
                 <stop offset="100%" stopColor="#10b981" />
               </linearGradient>
             </defs>

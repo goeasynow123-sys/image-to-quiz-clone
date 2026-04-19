@@ -10,19 +10,19 @@
     --card-foreground: 220 20% 15%;
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 15%;
-    --primary: 10 80% 55%;
+    --primary: 208 64% 39%;
     --primary-foreground: 0 0% 100%;
     --secondary: 210 40% 96%;
     --secondary-foreground: 220 20% 15%;
     --muted: 220 14% 96%;
     --muted-foreground: 215 16% 47%;
-    --accent: 207 70% 55%;
+    --accent: 208 64% 39%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 214 20% 92%;
     --input: 214 20% 92%;
-    --ring: 207 70% 55%;
+    --ring: 208 64% 39%;
     --radius: 0.875rem;
     /* Escala de texto responsiva */
     --text-xs: clamp(0.65rem, 0.6rem + 0.25vw, 0.75rem);
@@ -32,10 +32,10 @@
     --text-xl: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
     --text-2xl: clamp(1.35rem, 1.25rem + 0.5vw, 1.6rem);
     
-    --quiz-cta-from: 15 85% 58%;
-    --quiz-cta-to: 5 85% 52%;
-    --quiz-selection: 207 70% 55%;
-    --quiz-selection-bg: 207 70% 96%;
+    --quiz-cta-from: 208 64% 45%;
+    --quiz-cta-to: 208 64% 35%;
+    --quiz-selection: 208 64% 39%;
+    --quiz-selection-bg: 208 64% 96%;
     --quiz-success: 142 71% 45%;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
