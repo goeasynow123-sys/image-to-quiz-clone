@@ -116,7 +116,7 @@ const QuizFlow = () => {
   }, [step, state.age, state.dogName, state.breed, state.challenges, state.obedienceLevel, update, next, autoNext]);
 
   return (
-    <div className="h-[100dvh] w-full bg-background max-w-[500px] mx-auto flex flex-col overflow-hidden fixed inset-0 shadow-2xl sm:border-x sm:border-border">
+    <div className="h-[100dvh] w-full bg-background max-w-[500px] mx-auto flex flex-col overflow-hidden fixed inset-0 shadow-2xl sm:border-x sm:border-border box-border">
       {step < 11 && step !== 7 && (
         <div className="px-4 pt-3 pb-1 flex-shrink-0">
           <QuizHeader

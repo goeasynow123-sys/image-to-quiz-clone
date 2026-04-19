@@ -22,7 +22,7 @@ const Step6ObedienceSlider: React.FC<Step6ObedienceSliderProps> = ({ onSelect })
         </p>
       </div>
 
-      <div className="flex-1 flex flex-col justify-center items-center px-4">
+      <div className="flex-1 flex flex-col justify-center items-center">
         {/* Barra de Obediência com Preenchimento Proporcional */}
         <div className="w-full relative py-6">
           <div className="absolute top-1/2 left-0 w-full h-6 rounded-full -translate-y-1/2 overflow-hidden bg-gray-100 border border-gray-200 shadow-inner">
