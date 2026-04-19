@@ -35,7 +35,7 @@ const Step26Specialist = ({ onNext }: Step26Props) => {
         </div>
 
         <p className="text-muted-foreground text-center text-xs sm:text-sm italic mb-4 leading-relaxed px-2">
-          "O PawChamp incorpora o treinamento por reforço positivo para fornecer conteúdo e recursos adaptados a cada tutor de cão, visando um treinamento canino aprimorado."
+          "O Desafio POI incorpora o treinamento por reforço positivo para fornecer conteúdo e recursos adaptados a cada tutor de cão, visando um treinamento canino aprimorado."
         </p>
 
         {/* Specialist Card - Compacted */}
@@ -51,7 +51,7 @@ const Step26Specialist = ({ onNext }: Step26Props) => {
             <div className="flex-1">
               <p className="text-foreground font-bold text-sm leading-tight">Dra. Lisa V.</p>
               <p className="text-muted-foreground text-[10px] sm:text-xs leading-tight mt-0.5">
-                Neurobióloga e especialista certificada em cães, equipe PawChamp
+                Neurobióloga e especialista certificada em cães, equipe Desafio POI
               </p>
             </div>
           </div>

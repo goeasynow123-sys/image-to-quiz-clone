@@ -12,7 +12,7 @@ const Step4SocialProof = ({ onNext }: Step4Props) => {
           Junte-se a +50 mil tutores que transformaram a obediência de seus cães.
         </h1>
         <p className="text-sm sm:text-base text-muted-foreground text-center mb-5 px-2">
-          Esqueça métodos antigos e punitivos. O <strong>Desafio PawChamp</strong> utiliza a ciência moderna para criar uma conexão real entre você e seu cão.
+          Esqueça métodos antigos e punitivos. O <strong>Desafio POI</strong> utiliza a ciência moderna para criar uma conexão real entre você e seu cão.
         </p>
 
         <div className="w-full border-l-4 border-primary pl-5 py-3 sm:py-5 mb-5 bg-primary/5 rounded-r-2xl">
@@ -21,7 +21,7 @@ const Step4SocialProof = ({ onNext }: Step4Props) => {
             Não existem cães maus —<br />apenas mau treino.
           </p>
           <p className="text-muted-foreground mt-2 text-xs sm:text-sm font-medium">
-            🐾 Equipe <strong>PawChamp</strong>
+            🐾 Equipe <strong>Desafio POI</strong>
           </p>
         </div>
 

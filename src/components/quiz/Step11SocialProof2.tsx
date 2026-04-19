@@ -25,7 +25,7 @@ const Step11SocialProof2 = ({ onNext }: Step11Props) => {
               <span className="text-primary-foreground text-[10px]">🐾</span>
             </div>
             <span className="text-foreground font-semibold text-xs sm:text-sm">
-              Equipe <strong>PawChamp</strong>
+              Equipe <strong>Desafio POI</strong>
             </span>
           </div>
         </div>

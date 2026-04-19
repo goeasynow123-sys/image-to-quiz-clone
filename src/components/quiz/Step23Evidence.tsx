@@ -9,7 +9,7 @@ const Step23Evidence = ({ onNext }: Step23Props) => {
     <div className="flex flex-col h-[calc(100vh-60px)] overflow-hidden quiz-step-enter pb-32">
       <div className="flex-1 px-5 pt-6 sm:pt-6 flex flex-col items-center">
         <h1 className="mt-0 text-[1.35rem] font-bold text-foreground text-center mb-3 leading-snug">
-          O PawChamp foi desenvolvido utilizando técnicas de adestramento e comportamento canino baseadas em evidências.
+          O Desafio POI foi desenvolvido utilizando técnicas de adestramento e comportamento canino baseadas em evidências.
         </h1>
         <p className="text-muted-foreground text-center mb-4 sm:mb-6 sm:mb-8 text-sm">
           Desenvolvido com as mais recentes descobertas em comportamento canino, nosso desafio é a união da pesquisa de ponta com a prática que gera resultados reais.

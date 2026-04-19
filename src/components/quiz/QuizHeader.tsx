@@ -1,5 +1,5 @@
 import { ChevronLeft } from "lucide-react";
-import logo from "@/assets/logo-pawchamp.png";
+import logo from "@/assets/logo-desafiopoi.png";
 
 interface QuizHeaderProps {
   onBack?: () => void;
@@ -22,7 +22,7 @@ const QuizHeader = ({ onBack, showBack = false, progress }: QuizHeaderProps) => 
           </button>
         )}
         {/* Logo menor: h-6 = 24px */}
-        <img src={logo} alt="PawChamp" className="h-6" />
+        <img src={logo} alt="Desafio POI" className="h-8" />
       </div>
 
       {/* Barra de progresso */}
