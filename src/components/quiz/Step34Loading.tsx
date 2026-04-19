@@ -52,16 +52,20 @@ const Step34Loading = ({ dogName, onNext }: Step34Props) => {
           Fazendo ajustes finais no plano personalizado de {dogName}
         </h2>
 
-        <div className="relative w-full h-3 bg-gray-100 rounded-full overflow-hidden mb-3 border border-gray-200 shadow-inner">
-          <div
-            className="h-full bg-primary transition-all duration-100 ease-out"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
+        <div className="flex flex-col items-center gap-6">
+          {/* Spinner animado */}
+          <div className="relative w-20 h-20">
+            <div className="absolute inset-0 border-4 border-gray-100 rounded-full" />
+            <div 
+              className="absolute inset-0 border-4 border-primary rounded-full border-t-transparent animate-spin"
+              style={{ animationDuration: '0.8s' }}
+            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-primary font-black text-lg">{Math.round(progress)}%</span>
+            </div>
+          </div>
 
-        <div className="flex flex-col items-center gap-2">
-          <span className="text-primary font-black text-2xl">{Math.round(progress)}%</span>
-          <p className="text-gray-500 font-bold text-xs animate-pulse min-h-[1rem]">
+          <p className="text-gray-500 font-bold text-resp-sm animate-pulse min-h-[1.5rem] max-w-[280px] mx-auto">
             {messages[messageIndex]}
           </p>
         </div>
