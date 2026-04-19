@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+    --primary: 10 80% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 220 20% 15%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 207 70% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 20% 92%;
+    --input: 214 20% 92%;
+    --ring: 207 70% 55%;
+    --radius: 0.875rem;
+    /* Escala de texto responsiva */
+    --text-xs: clamp(0.65rem, 0.6rem + 0.25vw, 0.75rem);
+    --text-sm: clamp(0.8rem, 0.75rem + 0.25vw, 0.9rem);
+    --text-base: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
+    --text-lg: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+    --text-xl: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
+    --text-2xl: clamp(1.35rem, 1.25rem + 0.5vw, 1.6rem);
+    
+    --quiz-cta-from: 15 85% 58%;
+    --quiz-cta-to: 5 85% 52%;
+    --quiz-selection: 207 70% 55%;
+    --quiz-selection-bg: 207 70% 96%;
+    --quiz-success: 142 71% 45%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    @apply bg-background text-foreground antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Garante que o viewport ocupe 100% mas sem scroll no body */
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    inset: 0;
+    touch-action: none;
+    /* Base font size para rem consistente */
+    font-size: 16px;
+  }
+
+  /* Classes utilitárias para texto responsivo */
+  .text-resp-xs { font-size: var(--text-xs); }
+  .text-resp-sm { font-size: var(--text-sm); }
+  .text-resp-base { font-size: var(--text-base); }
+  .text-resp-lg { font-size: var(--text-lg); }
+  .text-resp-xl { font-size: var(--text-xl); }
+  .text-resp-2xl { font-size: var(--text-2xl); }
+}
+
+@layer components {
+  /* ===== BOTÃO PRIMÁRIO ===== */
+  .btn-primary {
+    @apply w-full flex items-center justify-center font-bold text-primary-foreground
+           active:scale-[0.97] transition-transform duration-100 select-none cursor-pointer;
+    height: 52px;
+    border-radius: 14px;
+    font-size: 0.9375rem;
+    background: linear-gradient(135deg, hsl(var(--quiz-cta-from)), hsl(var(--quiz-cta-to)));
+    box-shadow: 0 4px 16px hsl(var(--quiz-cta-from) / 0.3);
+    border: none;
+    will-change: transform;
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+    background: hsl(var(--muted-foreground));
+    transform: none !important;
+  }
+
+  /* ===== BOTÃO CHECKOUT ===== */
+  .btn-checkout {
+    @apply w-full flex items-center justify-center font-black text-white uppercase
+           active:scale-[0.97] transition-transform duration-100 select-none cursor-pointer;
+    height: 56px;
+    border-radius: 14px;
+    font-size: 0.9375rem;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    padding: 0 16px;
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.35);
+    border: none;
+    will-change: transform;
+  }
+
+  /* ===== OPÇÃO DE QUIZ ===== */
+  .quiz-option {
+    @apply w-full flex items-center gap-3 text-left border-2 border-border bg-background
+           transition-colors duration-150 active:scale-[0.98] select-none cursor-pointer;
+    min-height: 52px;
+    padding: 12px 14px;
+    border-radius: 12px;
+    will-change: transform;
+  }
+
+  .quiz-option-selected {
+    border-color: hsl(var(--quiz-selection));
+    background-color: hsl(var(--quiz-selection-bg));
+  }
+
+  /* ===== INDICADORES ===== */
+  .quiz-check {
+    @apply w-5 h-5 rounded-full border-2 border-border flex items-center justify-center flex-shrink-0
+           transition-colors duration-150;
+  }
+
+  .quiz-check-active {
+    border-color: hsl(var(--quiz-selection));
+    background-color: hsl(var(--quiz-selection));
+  }
+
+  /* ===== TELA DE STEP ===== */
+  .quiz-screen {
+    @apply flex-1 flex flex-col overflow-hidden;
+    padding: 14px 16px 0;
+    animation: quizStepIn 0.22s ease-out both;
+  }
+
+  /* ===== ÁREA COM SCROLL ===== */
+  .quiz-scroll {
+    @apply flex-1 overflow-y-auto overscroll-contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ===== BARRA DO CTA ===== */
+  .cta-bar {
+    @apply bg-background flex-shrink-0;
+    padding: 10px 0;
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 12px);
+  }
+
+  /* ===== CARD ===== */
+  .quiz-card {
+    @apply bg-white border border-gray-100 rounded-2xl p-4 shadow-sm;
+  }
+
+  /* ===== CHIP ===== */
+  .quiz-chip {
+    @apply flex items-center justify-center border-2 border-border bg-background
+           font-semibold text-gray-600 transition-colors duration-150 active:scale-95 select-none cursor-pointer;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 18px;
+    font-size: 0.8125rem;
+  }
+
+  .quiz-chip-selected {
+    border-color: hsl(var(--primary));
+    background-color: hsl(var(--primary) / 0.07);
+    color: hsl(var(--primary));
+  }
+
+  /* ===== INPUT ===== */
+  .quiz-input {
+    @apply w-full border-2 border-border bg-background outline-none text-foreground
+           focus:border-primary transition-colors duration-150;
+    height: 50px;
+    padding: 0 14px;
+    border-radius: 12px;
+    font-size: 0.9375rem;
+  }
+
+  .cta-pulse {
+    animation: ctaPulse 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes quizStepIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 4px 16px hsl(var(--quiz-cta-from) / 0.3); }
+  50%       { box-shadow: 0 4px 28px hsl(var(--quiz-cta-from) / 0.5); }
+}
